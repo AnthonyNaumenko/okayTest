@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-14 19:57:19
+/* Smarty version 3.1.34-dev-7, created on 2020-01-16 03:41:02
   from '/home/anthony/Workspace/OkayCMS/design/okay_shop/html/head.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e1e00ff3326e0_82324751',
+  'unifunc' => 'content_5e1fbf2e148341_82878005',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9a8fae4f9d740f6d6cdb09de18ac0c6567df0041' => 
     array (
       0 => '/home/anthony/Workspace/OkayCMS/design/okay_shop/html/head.tpl',
-      1 => 1579022995,
+      1 => 1579138858,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e1e00ff3326e0_82324751 (Smarty_Internal_Template $_smarty_tpl) {
-?>
-        <base href="<?php echo $_smarty_tpl->tpl_vars['base']->value;?>
+function content_5e1fbf2e148341_82878005 (Smarty_Internal_Template $_smarty_tpl) {
+?>        <base href="<?php echo $_smarty_tpl->tpl_vars['base']->value;?>
 /">
 
     <?php echo $_smarty_tpl->tpl_vars['ok_head']->value;?>

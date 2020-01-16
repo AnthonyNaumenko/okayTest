@@ -292,3 +292,4 @@ $lang['product_sticker_hit'] = "Top sales";
 $lang['product_sticker_discount'] = "Super price";
 $lang['cart_empty_coupon_error'] = "Coupon cannot be empty";
 $lang['register_write_comment'] = "Fill the form";
+$lang['orders_completed'] = "Orders completed";

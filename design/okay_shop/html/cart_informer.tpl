@@ -14,3 +14,4 @@
         <span class="cart_total">{($cart->total_price)|convert} {$currency->sign|escape}</span>*}
     </div>
 {/if}
+ 

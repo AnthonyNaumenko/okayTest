@@ -261,7 +261,6 @@ $lang['order_thank'] = "Спасибо что выбрали нас.";
 $lang['features_other_filter'] = "Другие фильтры";
 $lang['features_filter_discounted'] = "Со скидкой";
 $lang['features_filter_featured'] = "Хиты продаж";
-
 $lang['page404_text'] = "Страница, которую вы запрашиваете, не существует, или она удалена. Возможно, вы набрали неправильный адрес. Попробуйте ввести еще раз.";
 $lang['meta_organization'] = "Организация";
 $lang['features_catalog'] = "Категории";
@@ -293,3 +292,4 @@ $lang['product_sticker_hit'] = "Топ продаж";
 $lang['product_sticker_discount'] = "Суперцена";
 $lang['cart_empty_coupon_error'] = "Купон не может быть пустым";
 $lang['register_write_comment'] = "Заполните форму";
+$lang['orders_completed'] = " Выполнено заказов: ";

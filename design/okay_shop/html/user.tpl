@@ -126,7 +126,7 @@
 
                                         {* Order date *}
                                         <td>{$order->date|date}</td>
-
+                                                                                                                                                                                                                                                                                     
                                         {* Order status *}
                                         <td>
                                             {if $order->paid == 1}
@@ -134,9 +134,20 @@
                                             {/if}
                                             {$orders_status[$order->status_id]->name|escape}
                                         </td>
+                                                                                                                                                      
                                     </tr>
-                                    {/foreach}
+                                    {/foreach}                                           
                                 </table>
+                                <div>  
+                               	   {$quan=0}
+                                   {foreach $orders as $order}                                            
+                                        {if $order->paid == 1}
+                                          {$quan=$quan+1}                                                                                                                      
+                                        {/if}                                                     
+                                   {/foreach}
+                                   <span data-language="orders_completed">{$lang->orders_completed}</span>
+                                   <span>{$quan|escape}</span> 
+                                </div>
                             </div>
                         </div>
                     </div>

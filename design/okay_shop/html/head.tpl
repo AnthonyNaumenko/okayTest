@@ -1,4 +1,3 @@
-
     {* Full base address *}
     <base href="{$base}/">
 
