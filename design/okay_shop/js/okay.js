@@ -118,7 +118,18 @@ $( document ).on( 'click', '.fn_product_amount span', function() {
         action = 'minus';
     }
     amount_change( input, action );
+    
 } );
+
+/*Обновление минимальной суммы заказа*/
+$( document ).on( 'click', '.fn_product_amount span', function() {
+$.ajax({
+    url: okay.router['cart_ajax'],
+    success: function(){
+       $( '#min_cost' ).load('cart #min_cost');
+    }
+  });
+});
 
 /* Функция добавления / удаления в папку сравнения */
 $(document).on('click', '.fn_comparison', function(e){
@@ -744,7 +755,7 @@ $(function(){
 function ajax_set_result(data) {
     $( '#cart_informer' ).html( data.cart_informer );
     $( '#fn_purchases' ).html( data.cart_purchases );
-    
+       
     if (data.cart_coupon) {
         $( '#fn_cart_coupon' ).html(data.cart_coupon);
     }

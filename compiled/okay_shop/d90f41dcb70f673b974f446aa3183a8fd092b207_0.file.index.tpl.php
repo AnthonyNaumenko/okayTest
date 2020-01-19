@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-16 00:15:10
+/* Smarty version 3.1.34-dev-7, created on 2020-01-19 15:38:12
   from '/home/anthony/Workspace/OkayCMS/design/okay_shop/html/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e1f8eeea72875_75236643',
+  'unifunc' => 'content_5e245bc4cbcf23_53385968',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd90f41dcb70f673b974f446aa3183a8fd092b207' => 
     array (
       0 => '/home/anthony/Workspace/OkayCMS/design/okay_shop/html/index.tpl',
-      1 => 1579126505,
+      1 => 1579441087,
       2 => 'file',
     ),
   ),
@@ -32,7 +32,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:callback.tpl' => 1,
   ),
 ),false)) {
-function content_5e1f8eeea72875_75236643 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e245bc4cbcf23_53385968 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/home/anthony/Workspace/OkayCMS/vendor/smarty/smarty/libs/plugins/modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
 ?>
 <!DOCTYPE html>
@@ -307,7 +307,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                                     <?php echo $_smarty_tpl->tpl_vars['settings']->value->site_working_hours;?>
 
                                 </span>
-                            </div>
+                            </div>									
                         <?php }?>
                         <div class="footer__contact_item">
                             <a class="fn_callback callback d-inline-flex align-items-center" href="#fn_callback" data-language="index_back_call">

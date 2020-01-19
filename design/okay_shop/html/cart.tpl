@@ -168,7 +168,13 @@
                                 <div id="fn_ajax_deliveries">
                                     {include file='cart_deliveries.tpl'}
                                 </div>
-
+								
+                                {*условие минимального заказа*}                         
+                                <div id="min_cost">
+                                               
+                                   {$minCost=10000}
+                                   {if $active_delivery->total_price_with_delivery>$minCost}                            
+                                                            
                                 <div class="block form form_cart form--boxed">
                                     <div class="form__footer">
                                         {* Captcha *}
@@ -188,7 +194,6 @@
                                                 </div>
                                             {/if}
                                         {/if}
-
                                         <input type="hidden" name="checkout" value="1">
                                         {* Submit button *}
                                         <button class="form__button button--blick g-recaptcha" type="submit" name="checkout" {if $settings->captcha_type == "invisible"}data-sitekey="{$settings->public_recaptcha_invisible}" data-badge='bottomleft' data-callback="onSubmit"{/if} value="{$lang->cart_checkout}">
@@ -196,6 +201,15 @@
                                         </button>
                                     </div>
                                 </div>
+                              
+                                {else}
+                                    <div class="message_error">
+                                        <span>{$lang->min_order_amount} </span>
+                                        <span class="fn_payment_price">{$minCost|convert}</span><span class="currency">{$currency->sign|escape}</span>
+                               		 </div>
+                                {/if}
+                                </div>
+                                                                                          
                             </div>
                         </div>
                     </div>
@@ -211,3 +225,9 @@
         <p class="block padding" data-language="cart_empty">{$lang->cart_empty}</p>
     </div>
 {/if}
+                                                           
+                                                           
+                                                           
+                                                           
+                                           
+                                                  

@@ -293,3 +293,4 @@ $lang['product_sticker_discount'] = "Суперцена";
 $lang['cart_empty_coupon_error'] = "Купон не может быть пустым";
 $lang['register_write_comment'] = "Заполните форму";
 $lang['orders_completed'] = " Выполнено заказов: ";
+$lang['min_order_amount'] = "Минимальная сумма заказа: ";

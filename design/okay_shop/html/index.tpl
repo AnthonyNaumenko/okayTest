@@ -207,7 +207,7 @@
                                     {include file="svg.tpl" svgId="time_icon"}
                                     {$settings->site_working_hours}
                                 </span>
-                            </div>
+                            </div>									
                         {/if}
                         <div class="footer__contact_item">
                             <a class="fn_callback callback d-inline-flex align-items-center" href="#fn_callback" data-language="index_back_call">
