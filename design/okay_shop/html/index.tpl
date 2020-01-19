@@ -75,13 +75,42 @@
                                     </a>
                                 </div>
                             {/if}
-                            {if $settings->site_working_hours}
+                        {*режим работы магазина*}
+                         <div class="header-contact__item header-contact--time">
+                            <div class="d-flex align-items-center header-contact__section">
+                                <span class="d-flex align-items-start open_hours">
+
+                                    {$now_time=strtotime('now')}
+                                    {$open_time=strtotime("09:00:00")}
+                                    {$close_time=strtotime("18:00:00")}
+
+                                    {*Выходные*}
+                                    {if $smarty.now|date_format:"%A" == 'Saturday' || $smarty.now|date_format:"%A"== 'Sunday'}
+                                        <span>{$lang->shop_open_mon}</span>		
+                                    {else}      
+                                        {*в момент работы магазина*}
+                                        {if $now_time>$open_time && $now_time<$close_time}
+                                            <span>{$lang->close_shop}</span><span>{($close_time-$now_time)|date_format:"%H:%M:%S"}</span>
+                                        {/if}     
+                                        {*до открытия*}
+                                        {if $now_time<$open_time}
+                                            <span>{$lang->open_shop}</span>{($open_time-$now_time)|date_format:"%H:%M:%S"}</span>
+                                        {/if}     
+                                        {*после закрытия*}
+                                        {if $now_time>$close_time}
+                                            <span>{$lang->open_shop}</span><span>{($open_time+(strtotime('23:59:59')-$now_time))|date_format:"%H:%M:%S"}</span>
+                                        {/if}
+                                    {/if} 
+                                </span>
+                        	</div>
+						</div>
+                            {*{if $settings->site_working_hours}
                                 <div class="header-contact__item header-contact--time">
                                     <div class="d-flex align-items-center header-contact__section">
                                         <div class="header-contact__title-s">{$settings->site_working_hours}</div>
                                     </div>
                                 </div>
-                            {/if}
+                            {/if}*}
                          </div>
                     </div>
                 </div>
@@ -201,14 +230,43 @@
                                 </a>
                             </div>
                         {/if}
-                        {if $settings->site_working_hours}
+                        {*режим работы магазина*}
+                        <div class="footer__contact_item">
+                            <span class="d-flex align-items-start open_hours">
+                                {include file="svg.tpl" svgId="time_icon"}
+                                {*{$now_time=$smarty.now|date_format:"%H:%M:%S"} *}
+                                {$now_time=strtotime('now')}
+                                {$open_time=strtotime("09:00:00")}
+                                {$close_time=strtotime("18:00:00")}
+
+                                {*Выходные*}
+                                {if $smarty.now|date_format:"%A" == 'Saturday' || $smarty.now|date_format:"%A"== 'Sunday'}
+                                    <span>{$lang->shop_open_mon}</span>		
+                                {else}      
+                                    {*в момент работы магазина*}
+                                    {if $now_time>$open_time && $now_time<$close_time}
+                                        <span>{$lang->close_shop}</span><span>{($close_time-$now_time)|date_format:"%H:%M:%S"}</span>
+                                    {/if}     
+                                    {*до открытия*}
+                                    {if $now_time<$open_time}
+                                        <span>{$lang->open_shop}</span>{($open_time-$now_time)|date_format:"%H:%M:%S"}</span>
+                                    {/if}     
+                                    {*после закрытия*}
+                                    {if $now_time>$close_time}
+                                        <span>{$lang->open_shop}</span><span>{($open_time+(strtotime('23:59:59')-$now_time))|date_format:"%H:%M:%S"}</span>
+                                    {/if}
+                                {/if}     
+                            </span>
+                        </div>
+                        {*{if $settings->site_working_hours}
                             <div class="footer__contact_item">
                                 <span class="d-flex align-items-start open_hours">
                                     {include file="svg.tpl" svgId="time_icon"}
                                     {$settings->site_working_hours}
                                 </span>
-                            </div>									
-                        {/if}
+                            </div>
+                       
+                        {/if}*}
                         <div class="footer__contact_item">
                             <a class="fn_callback callback d-inline-flex align-items-center" href="#fn_callback" data-language="index_back_call">
                                 {include file="svg.tpl" svgId="support_icon"}

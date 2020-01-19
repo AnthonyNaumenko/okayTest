@@ -294,3 +294,6 @@ $lang['cart_empty_coupon_error'] = "Купон не може бути пусти
 $lang['register_write_comment'] = "Заповніть форму";
 $lang['orders_completed'] = " Виконано замовлень:";
 $lang['min_order_amount'] = "Мінімальна вартість замовлення:";
+$lang['close_shop'] = "Ми зачиняємося через:";
+$lang['open_shop'] = "Ми відкриємося через:";
+$lang['shop_open_mon'] = "Ми відкриємося в ПН о 9:00";

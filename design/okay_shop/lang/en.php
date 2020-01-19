@@ -294,3 +294,6 @@ $lang['cart_empty_coupon_error'] = "Coupon cannot be empty";
 $lang['register_write_comment'] = "Fill the form";
 $lang['orders_completed'] = "Orders completed";
 $lang['min_order_amount'] = "minimum order amount";
+$lang['close_shop'] = "We will close in:";
+$lang['open_shop'] = "We will open in";
+$lang['shop_open_mon'] = "We will open in MON at 9:00 am";
