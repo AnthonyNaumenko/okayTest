@@ -86,7 +86,8 @@
 
                                     {*Выходные*}
                                     {if $smarty.now|date_format:"%A" == 'Saturday' || $smarty.now|date_format:"%A"== 'Sunday'}
-                                    	<span>{$lang->shop_open_mon}</span>		
+                                    	{*<span>{$lang->shop_open_mon}</span>*}
+                                        <span>{$lang->close_shop}</span><span>{($close_time+(strtotime('23:59:59')-$now_time))|date_format:"%H:%M:%S"}</span>
                               		{else}      
                                         {*в момент работы магазина*}
                                         {if $now_time>$open_time && $now_time<$close_time}

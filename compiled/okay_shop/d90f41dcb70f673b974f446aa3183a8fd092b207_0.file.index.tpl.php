@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-20 00:33:27
+/* Smarty version 3.1.34-dev-7, created on 2020-02-08 19:28:33
   from '/home/anthony/Workspace/OkayCMS/design/okay_shop/html/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e24d9371009d0_12591014',
+  'unifunc' => 'content_5e3eefc1149723_98126349',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd90f41dcb70f673b974f446aa3183a8fd092b207' => 
     array (
       0 => '/home/anthony/Workspace/OkayCMS/design/okay_shop/html/index.tpl',
-      1 => 1579473200,
+      1 => 1581182906,
       2 => 'file',
     ),
   ),
@@ -32,7 +32,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:callback.tpl' => 1,
   ),
 ),false)) {
-function content_5e24d9371009d0_12591014 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e3eefc1149723_98126349 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/home/anthony/Workspace/OkayCMS/vendor/smarty/smarty/libs/plugins/modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
 ?>
 <!DOCTYPE html>
@@ -159,8 +159,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                                     <?php $_smarty_tpl->_assignInScope('close_time', strtotime("18:00:00"));?>
 
                                                                         <?php if (smarty_modifier_date_format(time(),"%A") == 'Saturday' || smarty_modifier_date_format(time(),"%A") == 'Sunday') {?>
-                                    	<span><?php echo $_smarty_tpl->tpl_vars['lang']->value->shop_open_mon;?>
-</span>		
+                                    	                                        <span><?php echo $_smarty_tpl->tpl_vars['lang']->value->close_shop;?>
+</span><span><?php echo smarty_modifier_date_format(($_smarty_tpl->tpl_vars['close_time']->value+(strtotime('23:59:59')-$_smarty_tpl->tpl_vars['now_time']->value)),"%H:%M:%S");?>
+</span>
                               		<?php } else { ?>      
                                                                                 <?php if ($_smarty_tpl->tpl_vars['now_time']->value > $_smarty_tpl->tpl_vars['open_time']->value && $_smarty_tpl->tpl_vars['now_time']->value < $_smarty_tpl->tpl_vars['close_time']->value) {?>
                                             <span><?php echo $_smarty_tpl->tpl_vars['lang']->value->close_shop;?>

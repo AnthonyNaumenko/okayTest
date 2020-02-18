@@ -2,10 +2,11 @@
 {if $user}
 	<a class="d-inline-flex align-items-center account__link" href="{url_generator route='user'}">
 		{include file="svg.tpl" svgId="user_icon"}
-        <span class="account__text" data-language="index_account">{$lang->index_account} </span>
+		<span class="account__text" data-language="index_account">{$lang->index_account} </span>
 		<span>{$user->name|escape}</span>
-        <div style="margin-left: 10%">
-          {$quan=0}       
+          
+     	<div style="margin-left: 10%">
+           {$quan=0}       
            {foreach $orders as $order}                                            
                 {if $order->paid == 1}
                     {$quan=$quan+1}                                                                                   
